@@ -42,6 +42,12 @@ from emp
 order by sal DESC
 limit 3
 
+-- FETCH FIRST
+select empno , fname , Sal 
+from emp
+order by sal DESC
+FIRST 3 ROWS ONLY
+
 -- Retrieve all the details of 3 lowest-paid employees who belong to the IT department from the "employee" table:
 select *
 from emp
@@ -66,3 +72,4 @@ from emp
 select * from emp
 offset 2 rows
 fetch first 4 rows only
+
