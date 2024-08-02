@@ -57,5 +57,12 @@ order by fname
 limit 3
 
 --------------------------------------------------------------
--- TOP Clause
+-- TOP Clause ~ doesnt havw offset
+-- Select top 3 rows and all data from them
+SELECT TOP 3* 
+from emp
 
+-- 4 rows after the 2nd row
+select * from emp
+offset 2 rows
+fetch first 4 rows only
