@@ -63,7 +63,7 @@ order by fname
 limit 3
 
 --------------------------------------------------------------
--- TOP Clause ~ doesnt havw offset
+-- TOP Clause ~ doesnt have offset
 -- Select top 3 rows and all data from them
 SELECT TOP 3* 
 from emp
