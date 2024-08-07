@@ -30,3 +30,26 @@ SELECT SUM(SAL * 12) AS ANNUAL_SAL FROM EMP WHERE DEPT ='HR'
 SELECT MIN(JOIN_DATE) AS asmin_joining_date FROM EMP
 
 
+-- Group by
+
+select gender,sum(sal)
+from emp
+group by gender
+
+select dept,avg(sal)
+from emp
+group by dept 
+
+select dept,min(sal)
+from emp
+where dept is not null
+group by dept 
+
+-- Determine the number of employees as total_employees in each department, sorted in descending order of the count from the employee table.
+select dept,COUNT(*) as tot_emp
+from emp
+group by dept 
+order by tot_emp desc
+
+
+-- 

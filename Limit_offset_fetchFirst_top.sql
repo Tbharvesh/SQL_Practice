@@ -73,3 +73,6 @@ select * from emp
 offset 2 rows
 fetch first 4 rows only
 
+
+
+
