@@ -1,6 +1,10 @@
 /*
-Inner Join : returns matching rows in both tables
-SELECT F
+Inner Join : returns matching rows in both tables on a specified condition
+SELECT col_name
+FROM TAB1 INNER JOIN TAB2 
+ON TAB1.COL = TAB2.COL
+WHERE . . 
+ORDER BY . .
 */
 select empid, ename ,emp.Sal ,deptId , mgrName 
 from emp 
@@ -31,3 +35,15 @@ ON PRODUCT.VID = VENDOR.VID
 GROUP BY VENDOR.VNAME
 ORDER BY SUM(PROD_PRICE)
 
+/*Write SQL query to retrieve the product ID, vendor ID, product name,
+vendor name, and product price from the "Products" table, joined
+with the "vendors" table, where the vendor ID ends with '01' and the
+product price is greater than 4*/
+SELECT prod_id,vendors.vend_id,prod_name,vend_name ,prod_price
+FROM Products
+INNER JOIN vendor
+ON products.vend_id = vendors.vend_id
+WHERE vendors.vend_id LIKE '%01' AND prod_price > 4;
+
+
+-- Cross join - cartesian prod.f
