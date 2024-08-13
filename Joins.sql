@@ -5,6 +5,11 @@ FROM TAB1 INNER JOIN TAB2
 ON TAB1.COL = TAB2.COL
 WHERE . . 
 ORDER BY . .
+
+Natural join : automatically matches values between tables no need for join conditiond , 
+colname and dtype must be same in both tables
+SELECT col_name
+FROM TAB1  natural JOIN TAB2 
 */
 select empid, ename ,emp.Sal ,deptId , mgrName 
 from emp 
